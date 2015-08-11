@@ -1,0 +1,8 @@
+<h1><%= author.name %>'s Posts</h1>
+
+<% author.posts.forEach(function(post) { %>
+<div class="well">
+  <h2><a href="/posts/<%= post.id %>"><%= post.title %></a></h2>
+  <p><%= post.body %></p>
+</div>
+<% }); %>

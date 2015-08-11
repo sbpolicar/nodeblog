@@ -1,0 +1,14 @@
+<h1>Posts</h1>
+
+<a href="/posts/new" class="btn btn-primary">
+  <span class="glyphicon glyphicon-plus"></span>
+  New Post
+</a>
+
+<% posts.forEach(function(post) { %>
+<div class="well">
+  <h2><a href="/posts/<%= post.id %>"><%= post.title %></a></h2>
+  <p><%= post.body %></p>
+  <p>-<a href="/authors/<%= post.author.id %>"><%= post.author.name %></a></p>
+</div>
+<% }); %>
